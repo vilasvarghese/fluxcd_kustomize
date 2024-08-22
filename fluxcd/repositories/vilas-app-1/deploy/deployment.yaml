@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: vilas-app-1
-        image: vilas-app-1:0.0.0
+        image: vilas-app-1:0.0.1
         ports:
         - containerPort: 5000
         volumeMounts:
