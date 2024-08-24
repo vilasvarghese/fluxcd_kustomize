@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: nginx
+  namespace: default
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: ./fluxcd/repositories/charts/nginx
+      sourceRef:
+        kind: GitRepository
+        name: fluxcdkustomize
+        namespace: default
